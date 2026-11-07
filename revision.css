@@ -1,0 +1,144 @@
+/* Eleven-slide revision, November 7, 2026.
+   Keep the Vessel composition and original screenshots. Desktop pages fit the
+   viewport; narrow screens keep natural vertical scrolling and fixed controls. */
+.slide-inner, .cover-grid > *, .evidence-grid > *, .paired-finding > *,
+.finding-proof > *, .creative-cards > *, .roadmap-cards > * { min-width: 0; }
+
+.paired-slide .section-heading { margin-bottom: 20px; }
+.paired-slide .section-heading .eyebrow { margin-bottom: 12px; }
+.paired-slide .section-heading .mega {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 24px;
+  row-gap: 7px;
+  font-size: clamp(38px, 3.55vw, 54px);
+  line-height: .97;
+}
+.paired-slide .section-heading .mega > em { margin: 0; }
+.paired-findings { display: grid; gap: 18px; }
+.paired-finding {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  border-top: 2px solid var(--ink);
+  padding-top: 16px;
+}
+.finding-title { display: flex; align-items: baseline; gap: 15px; }
+.finding-id {
+  flex: 0 0 auto;
+  font: 900 29px/1 Archivo, Arial, sans-serif;
+  letter-spacing: -.05em;
+  color: var(--ink);
+  background: var(--lime);
+  padding: 1px 5px 3px;
+}
+.paired-copy h3 { font-size: 26px; line-height: 1.06; letter-spacing: -.035em; }
+.paired-copy > p { font-size: 17px; line-height: 1.4; margin-top: 10px; }
+.paired-copy .fix-line { border-left-width: 3px; padding-left: 11px; }
+.paired-copy .scope { font-size: 12px; line-height: 1.4; margin-top: 8px; }
+.finding-proof { display: grid; gap: 12px; }
+.finding-proof.proof-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.paired-finding .proof { margin: 0 6px 6px 0; box-shadow: 4px 5px 0 var(--ink); }
+.paired-finding .proof .window-bar {
+  min-height: 28px;
+  height: auto;
+  padding: 6px 9px;
+  font-size: 8px;
+  line-height: 1.4;
+}
+.proof .window-bar time { white-space: nowrap; flex: 0 0 auto; }
+.paired-finding .proof-image { display: block; background: white; }
+.paired-finding .proof img {
+  width: 100%;
+  height: clamp(142px, calc(28vh - 73px), 195px);
+  max-height: none;
+  object-fit: contain;
+}
+.paired-finding .proof figcaption { font-size: 9px; line-height: 1.4; padding: 6px 9px; gap: 6px; }
+.proof-pair .window-bar { flex-wrap: wrap; gap: 2px 8px; }
+.proof-pair .window-bar > span { width: 100%; }
+.proof-pair .proof figcaption > span { display: none; }
+
+@media (min-width: 761px) {
+  .slide { padding-top: clamp(20px, 2.8vh, 30px); padding-bottom: clamp(20px, 2.8vh, 30px); }
+  .section-heading { margin-bottom: clamp(19px, 2.5vh, 27px); }
+  .section-heading .eyebrow { margin-bottom: 15px; }
+  .section-heading .mega { font-size: clamp(44px, min(5.1vw, 8.2vh), 78px); line-height: .9; }
+  .praise-slide .section-heading .mega { font-size: clamp(43px, min(4.8vw, 7.7vh), 72px); }
+  .cover-copy .mega { font-size: clamp(52px, min(6.5vw, 10.6vh), 100px); }
+  .cover-copy .intro-note { margin-bottom: 20px; }
+  .cover-copy .prepared { margin-top: 22px; }
+  .service-stage { height: min(455px, 56vh); }
+  .paired-slide .slide-inner { justify-content: center; }
+  .paired-slide .section-heading .mega { font-size: clamp(36px, min(3.55vw, 6.1vh), 54px); }
+  .paired-slide .section-heading { margin-bottom: 18px; }
+  .close-top { grid-template-columns: minmax(0, 1fr) 180px; gap: 5vw; }
+  .close-top .mega { font-size: clamp(50px, min(6.4vw, 9.6vh), 92px); }
+  .close-bottom { margin-top: 24px; }
+  .close-slide .footer-wordmark { margin-top: 24px; padding-top: 18px; }
+  .close-slide .footer-wordmark img { height: min(9vh, 82px); }
+}
+
+/* Short desktop screens need less chrome, not hidden or clipped content. */
+@media (min-width: 1021px) and (max-height: 820px) {
+  .masthead { flex-basis: 56px; margin-top: 13px; }
+  .deck { margin-top: 12px; }
+  .deck-footer { flex-basis: 62px; padding-top: 7px; padding-bottom: 7px; }
+  .paired-findings { gap: 14px; }
+  .paired-finding { gap: 28px; padding-top: 13px; }
+  .paired-copy h3 { font-size: 24px; }
+  .paired-copy > p { font-size: 16px; line-height: 1.38; margin-top: 8px; }
+  .paired-copy .scope { font-size: 11px; line-height: 1.4; margin-top: 7px; }
+  .paired-slide .section-heading { margin-bottom: 15px; }
+  .paired-slide .section-heading .eyebrow { margin-bottom: 10px; }
+  .fixes-slide .audit-row { padding-top: 19px; padding-bottom: 19px; }
+  .creative-copy { padding: 20px; }
+  .creative-number { font-size: 44px; margin-bottom: 18px; }
+  .creative-copy h3 { font-size: 25px; }
+  .creative-copy p { font-size: 16px; line-height: 1.4; margin-top: 12px; }
+  .roadmap-copy { padding: 21px; }
+  .roadmap-label { margin-bottom: 18px; padding-bottom: 12px; }
+  .roadmap-copy h3 { font-size: 26px; }
+  .roadmap-copy p { font-size: 16px; line-height: 1.4; margin-top: 13px; }
+  .roadmap-note { margin-top: 22px; font-size: 9px; }
+}
+
+@media (max-width: 1020px) and (min-width: 761px) {
+  .paired-slide .slide-inner { justify-content: flex-start; }
+  .paired-finding { gap: 22px; }
+  .paired-copy h3 { font-size: 22px; }
+  .paired-copy > p { font-size: 16px; }
+  .paired-copy .scope { font-size: 12px; }
+  .paired-slide .section-heading .mega { font-size: 38px; }
+  .proof-pair { gap: 9px; }
+}
+
+@media (max-width: 760px) {
+  .paired-slide { padding-top: 24px; padding-bottom: 28px; }
+  .paired-slide .slide-inner { justify-content: flex-start; }
+  .paired-slide .section-heading { margin-bottom: 21px; }
+  .paired-slide .section-heading .eyebrow { font-size: 8px; margin-bottom: 13px; }
+  .paired-slide .section-heading .mega {
+    display: block;
+    font-size: clamp(34px, 9.7vw, 57px);
+    line-height: .95;
+  }
+  .paired-slide .section-heading .mega > em { margin: .13em 0 .08em .025em; }
+  .paired-findings { gap: 28px; }
+  .paired-finding { grid-template-columns: 1fr; gap: 17px; padding-top: 19px; }
+  .finding-title { gap: 11px; align-items: flex-start; }
+  .finding-id { font-size: 25px; }
+  .paired-copy h3 { font-size: 24px; line-height: 1.08; }
+  .paired-copy > p { font-size: 16px; line-height: 1.45; margin-top: 12px; }
+  .paired-copy .scope { font-size: 12px; line-height: 1.45; margin-top: 10px; }
+  .paired-finding .proof img { height: auto; max-height: none; }
+  .finding-proof.proof-pair { grid-template-columns: 1fr; gap: 14px; }
+  .proof-pair .window-bar { flex-wrap: nowrap; }
+  .proof-pair .window-bar > span { width: auto; }
+  .paired-finding .proof .window-bar { min-height: 31px; font-size: 8px; }
+  .paired-finding .proof figcaption { font-size: 10px; padding: 8px 9px; }
+  .proof-pair .proof figcaption > span { display: block; }
+  .proof .window-bar { overflow-wrap: anywhere; }
+}
